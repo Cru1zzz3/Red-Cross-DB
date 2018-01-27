@@ -1,1 +1,1 @@
-# Red-Cross-DB
+Database Project for Red Cross Volunteers
