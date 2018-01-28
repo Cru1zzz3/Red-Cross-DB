@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <title> База данных волонтёров Красного Креста</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,19 +7,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-
-
 </head>
 <body>
+Здравствуйте, %username%! <br>
+
+
+
+<a href="registrateNewVolunteer.php"> Зарегистрировать нового волонтёра </a> <br>
+<a href="find.php"> Поиск </a> <br>
+<a href="cards.php"> Карточки добровольцев </a> <br>
+<a href="preferences.php"> Настройки </a> <br>
 
 
 
 
 <?php
-
+/*
+<a href="createDB.php"> Создать базу </a> <br>
 include 'createDB.php';
+include 'insertVolunteer.php';
+*/
 
 
 
