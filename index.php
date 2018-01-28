@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="shortcut icon" href="redcross.ico" type="image/x-icon">
 <title> База данных волонтёров Красного Креста</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -14,7 +15,7 @@
 
 
 <a href="registrateNewVolunteer.php"> Зарегистрировать нового волонтёра </a> <br>
-<a href="find.php"> Поиск </a> <br>
+<a href="findVolunteer.php"> Поиск </a> <br>
 <a href="cards.php"> Карточки добровольцев </a> <br>
 <a href="preferences.php"> Настройки </a> <br>
 
