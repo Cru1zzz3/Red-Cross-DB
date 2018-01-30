@@ -1,17 +1,22 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "volunteerDB";
+
+$host = 'localhost';
+$db = 'volunteerDB';
+$username = 'root';
+$password = '';
+$charset = 'utf8';
+$dsn = "mysql:host=$host;charset=$charset";
+$opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false];
 
 try{
-    $conn = new PDO("mysql:host=$servername;charset=UTF8",$username,$password);
 
-    $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO($dsn,$username,$password,$opt);
 
-    $sql = "CREATE DATABASE IF NOT EXISTS ".$dbname."  CHARACTER SET utf8 COLLATE utf8_general_ci";
+    $sql = "CREATE DATABASE IF NOT EXISTS ".$db."  CHARACTER SET utf8 COLLATE utf8_general_ci";
     $conn -> exec($sql);
-    echo "Database: '".$dbname."'' created successfully\n";
+    echo "Database: '".$db."'' created successfully\n";
 
 }
 

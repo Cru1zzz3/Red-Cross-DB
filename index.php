@@ -20,11 +20,12 @@
 <a href="preferences.php"> Настройки </a> <br>
 
 
+<a href="createDB.php"> Создать базу </a> <br>
 
 
 <?php
 /*
-<a href="createDB.php"> Создать базу </a> <br>
+
 include 'createDB.php';
 include 'insertVolunteer.php';
 */
