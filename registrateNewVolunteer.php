@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <form action="insertVolunteer.php" method="post">
+
+    <form action="insertVolunteer.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
 
             <div class="form-group">
@@ -73,6 +74,29 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Добавить нового волонтёра</button>
+
+
+        <div>
+
+        <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+        <!-- Название элемента input определяет имя в массиве $_FILES -->
+        Отправить этот файл (не более 2 MB): <input name="userfile" type="file" required />
+            <br>
+            <?php
+                if(isset($_GET['error'])){
+                    $error = $_GET['error'];
+                      switch ($error){
+                            case 'ERR_FORM_SIZE';
+
+                                echo "Файл слишком большой! Попробуйте меньший размер файла";
+                            case 'ERR_INI_SIZE';
+                                echo "Файл слишком большой! Попробуйте меньший размер файла";
+                        }
+                }
+            ?>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" value="Send File">Добавить нового волонтёра</button>
     </form>
 </body>

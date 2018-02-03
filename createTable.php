@@ -28,6 +28,7 @@ try {
       VK VARCHAR (30),
       INSTAGRAM VARCHAR (30),
       SEX VARCHAR (1) NOT NULL,
+      PHOTO LONGBLOB NOT NULL,
       PRIMARY KEY (ID))";
 
 
@@ -38,4 +39,6 @@ try {
 }
 catch (PDOException $e){
     echo $sql .$e ->getMessage();
+    header('Location:index.php?createDB=success');
+
 }
