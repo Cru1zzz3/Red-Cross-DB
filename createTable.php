@@ -10,13 +10,12 @@ $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false];
 
-$tableName = 'volunteerTable';
 
 try {
     $conn = new PDO($dsn,$username,$password,$opt);
 
 
-    $sql = "CREATE TABLE IF NOT EXISTS ".$tableName."(    
+    $sql = "CREATE TABLE IF NOT EXISTS volunteerTable(    
       ID INT (10) NOT NULL  AUTO_INCREMENT,
       SURNAME VARCHAR (30) NOT NULL,
       NAME VARCHAR (30) NOT NULL,
@@ -28,6 +27,9 @@ try {
       VK VARCHAR (30),
       INSTAGRAM VARCHAR (30),
       SEX VARCHAR (1) NOT NULL,
+      SERIALPASSPORT INT(4) NOT NULL,
+      NUMBERPASSPORT INT(6) NOT NULL,
+      DATEPASSPORT  VARCHAR (10) NOT NULL,
       PHOTO LONGBLOB NOT NULL,
       PRIMARY KEY (ID))";
 

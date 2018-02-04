@@ -26,7 +26,7 @@
             <div id="date">
             <p>
                 <label for="inputDate">Дата Рождения в формате дд/мм/гггг:</label>
-                <input type="text" id="inputDate" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" value="17/01/1999" class="datepicker" name="date" required/>
+                <input type="text" id="inputDate" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" value="17/01/1999" class="datepicker" name="date"  maxlength="10" required/>
             </p>
             <p>
                 <label for="inputAge">Возраст:</label>
@@ -56,8 +56,16 @@
             </div>
 
             <div id="passportData"> Паспортные данные:
-                <p></p>
+                <p>
+                <label for="serialPassport">Серия:</label>
+                <input type="text" class="form-control" id="serialPassport" value="" name="serialPassport" placeholder="XXXX" pattern="\d{4}" maxlength="4">
 
+                <label for="numberPassport">Номер:</label>
+                <input type="text" class="form-control" id="numberPassport" value="" name="numberPassport" placeholder="XXXXXX" pattern="\d{6}" maxlength="6">
+
+                    <label for="datePassport">Дата выдачи:</label>
+                    <input type="text" class="form-control" id="datePassport" value="" name="datePassport" placeholder="00/00/0000" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" maxlength="10">
+                </p>
             </div>
 
 

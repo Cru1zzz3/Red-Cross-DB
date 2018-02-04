@@ -28,8 +28,9 @@ $email = $_POST['email'];
 $vk = $_POST['vk'];
 $instagram = $_POST['instagram'];
 $sex = $_POST['sex'];
-
-
+$serialPassport = $_POST['serialPassport'];
+$numberPassport = $_POST['numberPassport'];
+$datePassport = $_POST['datePassport'];
 
 
 
@@ -40,8 +41,8 @@ try{
   //  if(empty($_POST['name'])) exit("Поле не заполнено");
   //  if(empty($_POST['surname'])) exit("Поле не заполнено");
 
-    $sql = "INSERT INTO volunteertable (SURNAME, NAME, PATRONYMIC, DATE, AGE, PHONE, EMAIL, VK, INSTAGRAM, SEX,PHOTO) 
-    VALUES (:surname,:name,:patronymic,:date,:age,:phone,:email,:vk,:instagram,:sex,:photo)";
+    $sql = "INSERT INTO volunteerTable (SURNAME, NAME, PATRONYMIC, DATE, AGE, PHONE, EMAIL, VK, INSTAGRAM, SEX,SERIALPASSPORT,NUMBERPASSPORT,DATEPASSPORT,PHOTO) 
+    VALUES (:surname,:name,:patronymic,:date,:age,:phone,:email,:vk,:instagram,:sex,:serialPassport,:numberPassport,:datePassport,:photo)";
 
     $stmt = $pdo -> prepare($sql);
 
@@ -61,7 +62,6 @@ try{
         case UPLOAD_ERR_NO_FILE:
             $error =ERR_NO_FILE;
             throw new RuntimeException('No file sent. Загружаемый файл отсутствует');
-
         case UPLOAD_ERR_INI_SIZE:
             $error = 'ERR_INI_SIZE';
             throw new RuntimeException('Size of file too big. Превышен размер файла');
@@ -114,7 +114,7 @@ try{
 
 
     $stmt -> execute(array('surname' => $surname,'name' => $name, 'patronymic' => $patronymic, 'date' => $date, 'age' => $age,
-        'phone' => $phone, 'email' => $email, 'vk' => $vk, 'instagram' => $instagram, 'sex' => $sex,'photo' => $sha1Photo));
+        'phone' => $phone, 'email' => $email, 'vk' => $vk, 'instagram' => $instagram, 'sex' => $sex,'serialPassport' => $serialPassport,'datePassport' => $datePassport,'numberPassport' => $numberPassport,'photo' => $sha1Photo));
 
 
 
@@ -128,7 +128,7 @@ try{
 
 }
 catch (PDOException $e){
-    echo  $sql ->getMessage();
+    echo  $sql . $e ->getMessage();
 }
 catch (RuntimeException $e){
  // echo  $e ->getMessage();
