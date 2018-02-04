@@ -33,6 +33,7 @@ $numberPassport = $_POST['numberPassport'];
 $datePassport = $_POST['datePassport'];
 $codePassport = $_POST['codePassport'];
 $placePassport = $_POST['placePassport'];
+$adress = $_POST['adress'];
 
 
 
@@ -44,8 +45,8 @@ try{
   //  if(empty($_POST['name'])) exit("Поле не заполнено");
   //  if(empty($_POST['surname'])) exit("Поле не заполнено");
 
-    $sql = "INSERT INTO volunteerTable (SURNAME, NAME, PATRONYMIC, DATE, AGE, PHONE, EMAIL, VK, INSTAGRAM, SEX,SERIALPASSPORT,NUMBERPASSPORT,DATEPASSPORT,CODEPASSPORT,PLACEPASSPORT,PHOTO) 
-    VALUES (:surname,:name,:patronymic,:date,:age,:phone,:email,:vk,:instagram,:sex,:serialPassport,:numberPassport,:datePassport,:codePassport,:placePassport,:photo)";
+    $sql = "INSERT INTO volunteerTable (SURNAME, NAME, PATRONYMIC, DATE, AGE, PHONE, EMAIL, VK, INSTAGRAM, SEX,SERIALPASSPORT,NUMBERPASSPORT,DATEPASSPORT,CODEPASSPORT,PLACEPASSPORT,ADRESS,PHOTO) 
+    VALUES (:surname,:name,:patronymic,:date,:age,:phone,:email,:vk,:instagram,:sex,:serialPassport,:numberPassport,:datePassport,:codePassport,:placePassport,:adress,:photo)";
 
     $stmt = $pdo -> prepare($sql);
 
@@ -118,7 +119,7 @@ try{
 
     $stmt -> execute(array('surname' => $surname,'name' => $name, 'patronymic' => $patronymic, 'date' => $date, 'age' => $age,
         'phone' => $phone, 'email' => $email, 'vk' => $vk, 'instagram' => $instagram, 'sex' => $sex,
-        'serialPassport' => $serialPassport,'datePassport' => $datePassport,'numberPassport' => $numberPassport,'codePassport' => $codePassport,'placePassport' => $placePassport,'photo' => $sha1Photo));
+        'serialPassport' => $serialPassport,'datePassport' => $datePassport,'numberPassport' => $numberPassport,'codePassport' => $codePassport,'placePassport' => $placePassport,'adress' => $adress,'photo' => $sha1Photo));
 
 
 

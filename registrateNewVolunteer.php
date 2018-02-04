@@ -89,7 +89,26 @@
                 <input type="number" size="2" name="age" min="14" max="99"  value="" placeholder="18" maxlength="2" required>
             </p>
 
+                <div id="sex">
+                    <label for="sex">Пол:</label>
 
+                        <input class="form-check-input" type="radio" name="sex" id="sexFemale" value="F" required>
+                        <label class="form-check-label" for="sexFemale">Женский</label>
+
+
+
+                        <input class="form-check-input" type="radio" name="sex" id="sexMale" value="M">
+                        <label class="form-check-label" for="sexMale">Мужской</label>
+
+                </div>
+            <div id="">
+                <label for="adress">Адрес:</label>
+
+                <p>
+
+                    <input type="text" class="form-control" id="adress" value="" name="adress" placeholder="" size="100" maxlength="" style="text-transform:uppercase">
+
+                </p>
             </div>
 
 
@@ -101,15 +120,20 @@
                 <input type="email" name="email" value="udartzev_sv@mail.ru" />
             </p>
 
-            <div id="vkBlock">
-                <label for="linkVK">Ссылка на Вконтакте:</label>
-                    <p>vk.com/ <input type="text" class="form-control" id="linkVK" value="cru1zzz3" name="vk" placeholder="" ></p>
+            <div id="socials"> <label for="socials">Соцсети:</label>
+                <div id="vkBlock">
+                    <label for="linkVK">ВК:</label>
+                        vk.com/ <input type="text" class="form-control" id="linkVK" value="cru1zzz3" name="vk" placeholder="" >
+                </div>
+                <br>
+                <div id="instagramBlock">
+                    <label for="linkInstagram">Инстаграм:</label>
+                    instagram.com/<input type="text" class="form-control" id="linkInstagram" value="cru1zzz3" name="instagram" placeholder="" >
+                </div>
+                <br>
             </div>
 
-            <div id="instagramBlock">
-                <label for="linkInstagram">Ссылка на Инстаграм:</label>
-                <p>instagram.com/<input type="text" class="form-control" id="linkInstagram" value="cru1zzz3" name="instagram" placeholder="" ></p>
-            </div>
+                <div id="education"></div>
 
             <div id="passportData"> Паспортные данные:
                 <p>
@@ -135,17 +159,7 @@
 
 
 
-        <div id="sex">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sex" id="sexFemale" value="F" required>
-                <label class="form-check-label" for="sexFemale">Женский</label>
-            </div>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sex" id="sexMale" value="M">
-                <label class="form-check-label" for="sexMale">Мужской</label>
-            </div>
-        </div>
 
 
 
